@@ -32,7 +32,7 @@ body {
     cursor: pointer;
 }
 
-.music-button:hover {
+#botaomsc:hover {
     font-size: 1.5em;
     color: #912419;
 }
