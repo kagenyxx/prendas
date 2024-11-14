@@ -1,0 +1,88 @@
+[
+    {
+        "title": "Jagermeister",
+        "category": "bebida",
+        "image": "images/jagermeister.jpg",
+        "link": "https://www.continente.pt/produto/licor-jagermeister-jagermeister-5591810.html",
+        "description": "Sou alcoólico."
+    },
+    {
+        "title": "Party Games",
+        "category": "tecnologia",
+        "image": "images/party-games.webp",
+        "link": "https://www.fnac.pt/SearchResult/ResultList.aspx?Search=jogos+de+tabuleiro&sft=1&sa=1",
+        "description": "Sou um grande apreciador de Party Games, pois providenciam uma enorme dose de diversão e dopamina a grupos grandes de amigos."
+    },
+    {
+        "title": "Jogo de Tabuleiro",
+        "category": "tecnologia",
+        "image": "images/jogos-tabuleiro.jpg",
+        "link": "https://www.fnac.pt/SearchResult/ResultList.aspx?Search=jogos+de+tabuleiro&sft=1&sa=1",
+        "description": "Sou um grande apreciador de Jogos de Tabuleiro e não tenho grande preferência por nenhum de momento. Surpreendam-me."
+    },
+    {
+        "title": "Palhetas (mas fixes)",
+        "category": "musica",
+        "image": "images/palhetas.png",
+        "link": "https://shorturl.at/RzFcl",
+        "description": "Imaginem, palhetas fixes! Essas da imagem são um exemplo, mas há muito melhor"
+    },
+    {
+        "title": "Malibu",
+        "category": "bebida",
+        "image": "images/malibu.jpg",
+        "link": "https://www.garrafeiranacional.com/malibu.html",
+        "description": "Sou alcoólico. + fica bué bem com Coca-Cola."
+    },
+    {
+        "title": "Headphones",
+        "category": "tecnologia",
+        "image": "images/headphones.jpg",
+        "link": "https://www.worten.pt/gaming/acessorios-gaming-pc/auscultadores-gaming?m_conectividade=USB&lf=m_conectividade&sort_by=price&order_by=asc",
+        "description": "Os meus phones estão, literalmente, por um fio. Por favor, tirem-nos da sua miséria. Estes são apenas um exemplo, mas importante: TÊM DE SER USB!!"
+    },
+    {
+        "title": "Teclado",
+        "category": "tecnologia",
+        "image": "images/teclado.png",
+        "link": "https://www.pccomponentes.pt/spirit-of-gamer-elite-k70-rgb-teclado-gaming-sem-fios",
+        "description": "Teclado gamer de última geração para um gamer respeitado. Prefiro com NUMPAD mas pode vir sem."
+    },
+    {
+        "title": "Camisolas de Clubes",
+        "category": "roupa",
+        "image": "images/camisola.png",
+        "link": "https://lojaoficial.ligaportugal.pt/category/promocoes",
+        "description": "A Liga Portugal tem coisas em outlet e eu curto de camisolas boas e baratas, de preferência o L. Também podem mandar vir daquelas páginas de Insta mais rascas, mas retros. Tambéma aceito equipas de eSports!!"
+    },
+    {
+        "title": "Roupa em Geral - Sei lá",
+        "category": "roupa",
+        "image": "images/meias.png",
+        "link": "https://www.pullandbear.com/pt/",
+        "description": "Mano não faço ideia. Qualquer porcaria serve desde que achem que eu irei gostar."
+    },
+    {
+        "title": "Merchandise de Banda",
+        "category": "musica",
+        "image": "images/blink182.png",
+        "link": "https://www.unkind.pt/pt/",
+        "description": "CDs, Camisolas, wtv. Algumas das bandas que eu gosto: blink-182, Green Day, Red Hot Chili Peppers, Sum 41."
+    },
+    {
+        "title": "Gift Cards",
+        "category": "tecnologia",
+        "image": "images/giftcard.png",
+        "link": "https://www.fnac.pt/pt/",
+        "description": "Basicamente é isto. Aceito da Steam e do Spotify."
+    },
+    {
+        "title": "Chocolates",
+        "category": "bebida",
+        "image": "images/chocolate.png",
+        "link": "./rick.html",
+        "description": "Chocolates são sempre bem vindos. Pode ser de qualquer marca, mas os brancos da Lindor.... 😭😭"
+    }
+
+]
+    
