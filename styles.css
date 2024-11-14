@@ -10,7 +10,9 @@ body {
     background-image: url('images/christmas_background.png'); /* Add a subtle Christmas background image */
     background-size: cover;
     background-attachment: fixed; /* Keeps the background fixed */
+    height: 100%;
 }
+
 .tabs-container {
     display: grid;
     grid-template-columns: 3% 97%;
@@ -59,17 +61,19 @@ body {
 }
 
 .container {
-    flex: 1; /* Allow the container to fill available space */
+    flex: 1; /* Permite que o container ocupe o espaço restante */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px; /* Padding around content */
-    margin: 20px; /* Space around container */
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque white */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1400px; /* Limite de largura opcional */
+    margin: 20px auto; /* Centraliza horizontalmente */
 }
 
 h3 {
