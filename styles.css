@@ -13,33 +13,45 @@ body {
 }
 
 .tabs-container {
-    background-color: rgba(255, 255, 255, 0.9); /* White with transparency */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    background-color: rgba(255, 255, 255, 0.9);
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Adiciona padding em volta */
+}
+
+.music-button {
+    background-color: transparent;
+    border: none;
+    color: #c0392b; /* Christmas red */
+    font-size: 1.2em;
+    margin-right: 20px; /* Espaço entre o botão e as tabs */
+    cursor: pointer;
 }
 
 .tabs {
     display: flex;
     justify-content: center;
-    padding: 10px 0; /* Padding around tabs */
+    flex-grow: 1; /* Centraliza as tabs */
 }
 
 .tab-button {
-    background-color: #c0392b; /* Christmas red */
-    border: 2px solid #d35400; /* Orange border */
-    color: white; /* Text color */
+    background-color: #c0392b;
+    border: 2px solid #d35400;
+    color: white;
     transition: transform 0.3s, background-color 0.3s;
-    margin: 0 10px; /* Space between buttons */
+    margin: 0 10px;
 }
 
 .tab-button.active {
-    background-color: #d35400; /* Lighter red for active tab */
+    background-color: #d35400;
 }
 
 .tab-button:hover {
-    background-color: #e74c3c; /* Darker red on hover */
+    background-color: #e74c3c;
 }
 
 .container {
