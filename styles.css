@@ -32,6 +32,11 @@ body {
     cursor: pointer;
 }
 
+.music-button:hover {
+    font-size: 1.5em;
+    color: #912419;
+}
+
 .tabs {
     display: flex;
     gap: 10px; /* Espaçamento entre os botões */
