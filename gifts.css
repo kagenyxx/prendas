@@ -1,0 +1,170 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Remove qualquer overflow horizontal */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    padding-bottom: 60px; /* Espaço para o footer */
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding seja calculado dentro da largura total */
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    max-width: 100%; /* Garante que o texto não ultrapasse a tela */
+    padding: 0; /* Remove padding extra */
+    margin: 0 0 20px 0; /* Ajusta o espaçamento inferior */
+}
+
+/* Estilo das abas */
+.tabs-container {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap; /* Garante que as tabs se ajustem em telas menores */
+}
+
+.tab-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tab-button.active {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.tab-button:hover {
+    background-color: #0056b3;
+}
+
+.gift-cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line if necessary */
+    justify-content: center; /* Centers the cards horizontally */
+    gap: 20px; /* Space between cards */
+    max-width: 1200px; /* Limits the maximum width */
+    margin: 0 auto;
+    width: 100%; /* Centers the container itself on the page */
+}
+
+
+.gift-card {
+    background-color: #fff;
+    width: 280px; /* Largura fixa para manter o formato de carta */
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.gift-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gift-title {
+    font-size: 1.2em; /* Ajusta o tamanho da fonte */
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.gift-details {
+    display: none;
+    margin-top: 15px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+}
+
+/* Button Styling */
+.expand-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    transition: background-color 0.3s ease;
+}
+
+.expand-button:hover {
+    background-color: #0056b3;
+}
+
+/* Icon Styling */
+.expand-button i {
+    font-size: 18px;
+}
+
+.card-front img {
+    max-height: 10%;
+    width: auto;
+}
+
+.button {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
