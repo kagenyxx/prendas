@@ -1,4 +1,33 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background */
+    display: flex;
+    flex-direction: column; /* Use column layout */
+    min-height: 100vh;
+    background-image: url('images/christmas_background.png'); /* Add a subtle Christmas background image */
+    background-size: cover;
+    background-attachment: fixed; /* Keeps the background fixed */
+}
+.tabs-container {
+    display: grid;
+    grid-template-columns: 3% 97%;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    background-color: rgba(255, 255, 255, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    gap: 20px; /* Espaçamento entre o botão e as tabs */
+}
 
+.music-button {
+    background-color: transparent;
+    border: none;
+    color: #c0392b; /* Christmas red */
     font-size: 1.2em;
     cursor: pointer;
 }
