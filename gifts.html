@@ -9,12 +9,8 @@
     <title>Presentes</title>
 </head>
 <body>
-
     <div class="tabs-container">
-        <div class="audio-control">
-            <button onclick="toggleMusic()" id="musicButton"><i class="fas fa-play"></i> Tocar Música</button>
-            <audio id="backgroundMusic" src="msc/ronaldo.mp3"></audio>
-        </div>
+        <button onclick="toggleMusic()" id="musicButton" class="music-button"><i class="fas fa-music"></i></button>
         <div class="tabs">
             <button class="tab-button active" onclick="filterGifts('all')"><i class="fas fa-th-large"></i></button>
             <button class="tab-button" onclick="filterGifts('tecnologia')"><i class="fas fa-laptop"></i></button>
@@ -22,13 +18,14 @@
             <button class="tab-button" onclick="filterGifts('bebida')"><i class="fas fa-glass-cheers"></i></button>
             <button class="tab-button" onclick="filterGifts('musica')"><i class="fa-solid fa-music"></i></button>
         </div>
+        <audio id="backgroundMusic" src="msc/ronaldo.mp3" loop></audio>
     </div>
-    
+
     <div class="container">
         <h3>Aqui estão algumas sugestões de presentes:</h3>
 
         <div class="gift-cards-container" id="giftCardsContainer">
-
+            <!-- Cartões de presente serão carregados aqui -->
         </div>
 
         <a href="index.html" class="button">Voltar</a>
@@ -39,16 +36,15 @@
     </footer>
 
     <script>
-        // Script to toggle music play/pause
         function toggleMusic() {
             const music = document.getElementById('backgroundMusic');
             const button = document.getElementById('musicButton');
             if (music.paused) {
                 music.play();
-                button.innerHTML = '<i class="fas fa-pause"></i> Parar Música';
+                button.classList.add('playing');
             } else {
                 music.pause();
-                button.innerHTML = '<i class="fas fa-play"></i> Tocar Música';
+                button.classList.remove('playing');
             }
         }
 
