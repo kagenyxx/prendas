@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png">
+    <title>Chocolates</title>
+    <style>
+        /* Centraliza o conteúdo no centro da página */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* Estiliza o texto piscante e animado */
+        .blinking-text {
+            font-size: 4rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px;
+            animation: crazyEffects 0.5s infinite alternate;
+        }
+
+        /* Animações malucas para o texto */
+        @keyframes crazyEffects {
+            0% {
+                color: red;
+                transform: scale(1) rotate(0deg);
+            }
+            20% {
+                color: blue;
+                transform: scale(1.2) rotate(10deg);
+            }
+            40% {
+                color: yellow;
+                transform: scale(0.8) rotate(-10deg);
+            }
+            60% {
+                color: lime;
+                transform: scale(1.3) rotate(15deg);
+            }
+            80% {
+                color: purple;
+                transform: scale(1) rotate(-15deg);
+            }
+            100% {
+                color: orange;
+                transform: scale(1.5) rotate(360deg);
+            }
+        }
+
+        /* Estiliza o vídeo */
+        video {
+            width: 80vw;
+            height: 60vh;
+            margin: 20px 0;
+        }
+
+        /* Botão de iniciar som */
+        #playButton {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            color: white;
+            background-color: blue;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Mensagem piscante e animada acima do vídeo -->
+    <div class="blinking-text">tu sabes onde comprar chocolates crl</div>
+    
+    <!-- Vídeo local em autoplay e loop, mas sem som inicial -->
+    <video id="video" loop>
+        <source src="video/rickroll.mp4" type="video/mp4">
+        O teu navegador não suporta o elemento de vídeo.
+    </video>
+    
+    <!-- Botão de Ativar Som -->
+    <button id="playButton">Ativar Som</button>
+    
+    <!-- Mensagem piscante e animada abaixo do vídeo -->
+    <div class="blinking-text">tu sabes onde comprar chocolates crl</div>
+    
+    <script>
+        const video = document.getElementById('video');
+        const playButton = document.getElementById('playButton');
+
+        // Inicia o vídeo em mute para autoplay
+        video.autoplay = true;
+        video.muted = true;
+        video.play();
+
+        // Quando clicar no botão, ativa o som
+        playButton.addEventListener('click', () => {
+            video.muted = false;
+            video.play();
+            playButton.style.display = 'none'; // Esconde o botão
+        });
+    </script>
+</body>
+</html>
