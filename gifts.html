@@ -9,6 +9,11 @@
     <title>Presentes</title>
 </head>
 <body>
+    <div class="audio-control">
+        <button onclick="toggleMusic()" id="musicButton"><i class="fas fa-play"></i> Tocar Música</button>
+        <audio id="backgroundMusic" src="msc/ronaldo.mp3"></audio>
+    </div>
+
     <div class="tabs-container">
         <div class="tabs">
             <button class="tab-button active" onclick="filterGifts('all')"><i class="fas fa-th-large"></i></button>
@@ -34,49 +39,61 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    fetch('data.json?v=' + new Date().getTime())
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
+        // Script to toggle music play/pause
+        function toggleMusic() {
+            const music = document.getElementById('backgroundMusic');
+            const button = document.getElementById('musicButton');
+            if (music.paused) {
+                music.play();
+                button.innerHTML = '<i class="fas fa-pause"></i> Parar Música';
+            } else {
+                music.pause();
+                button.innerHTML = '<i class="fas fa-play"></i> Tocar Música';
             }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Data fetched successfully:', data); // Check if data is fetched
-            const container = document.getElementById('giftCardsContainer');
-            data.forEach(gift => {
-                const card = document.createElement('div');
-                card.className = 'gift-card';
-                card.setAttribute('data-category', gift.category);
-                card.innerHTML = `
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="${gift.image}" alt="${gift.title}">
-                            <h4 class="gift-title">${gift.title}</h4>
-                        </div>
-                        <div class="card-back">
-                            <div class="gift-details">
-                                <p>Onde Comprar: <a href="${gift.link}" target="_blank">Exemplo Loja</a></p>
-                                <p>${gift.description}</p>
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('data.json?v=' + new Date().getTime())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Data fetched successfully:', data);
+                    const container = document.getElementById('giftCardsContainer');
+                    data.forEach(gift => {
+                        const card = document.createElement('div');
+                        card.className = 'gift-card';
+                        card.setAttribute('data-category', gift.category);
+                        card.innerHTML = `
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="${gift.image}" alt="${gift.title}">
+                                    <h4 class="gift-title">${gift.title}</h4>
+                                </div>
+                                <div class="card-back">
+                                    <div class="gift-details">
+                                        <p>Onde Comprar: <a href="${gift.link}" target="_blank">Exemplo Loja</a></p>
+                                        <p>${gift.description}</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
+                        `;
+                        container.appendChild(card);
+                    });
 
-            document.querySelectorAll('.gift-card').forEach(card => {
-                card.addEventListener('click', () => {
-                    card.classList.toggle('flipped');
+                    document.querySelectorAll('.gift-card').forEach(card => {
+                        card.addEventListener('click', () => {
+                            card.classList.toggle('flipped');
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
                 });
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error); // Log any fetch errors
         });
-    });
-
 
         function filterGifts(category) {
             const cards = document.querySelectorAll('.gift-card');
