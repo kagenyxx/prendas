@@ -15,7 +15,7 @@ body {
 
 .tabs-container {
     display: grid;
-    grid-template-columns: 3% 97%;
+    grid-template-columns: 3% 94% 3%;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     background-color: rgba(255, 255, 255, 0.9);
     position: sticky;
