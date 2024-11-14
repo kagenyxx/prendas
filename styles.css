@@ -12,8 +12,8 @@ body {
     background-attachment: fixed; /* Keeps the background fixed */
 }
 .tabs-container {
-    display: flex;
-    align-items: center; /* Centraliza verticalmente */
+    display: grid;
+    grid-template-columns: 3% 97%;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     background-color: rgba(255, 255, 255, 0.9);
     position: sticky;
@@ -32,19 +32,16 @@ body {
     cursor: pointer;
 }
 
-#botaomsc:hover {
-    font-size: 1.5em;
-    color: #912419;
-}
-
 .music-button:hover {
-    font-size: 1.5em !important;
+    font-size: 1.3em !important;
     color: #912419 !important;
 }
 
 .tabs {
     display: flex;
     gap: 10px; /* Espaçamento entre os botões */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tab-button {
