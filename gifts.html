@@ -9,12 +9,12 @@
     <title>Presentes</title>
 </head>
 <body>
-    <div class="audio-control">
-        <button onclick="toggleMusic()" id="musicButton"><i class="fas fa-play"></i> Tocar Música</button>
-        <audio id="backgroundMusic" src="msc/ronaldo.mp3"></audio>
-    </div>
 
     <div class="tabs-container">
+        <div class="audio-control">
+            <button onclick="toggleMusic()" id="musicButton"><i class="fas fa-play"></i> Tocar Música</button>
+            <audio id="backgroundMusic" src="msc/ronaldo.mp3"></audio>
+        </div>
         <div class="tabs">
             <button class="tab-button active" onclick="filterGifts('all')"><i class="fas fa-th-large"></i></button>
             <button class="tab-button" onclick="filterGifts('tecnologia')"><i class="fas fa-laptop"></i></button>
